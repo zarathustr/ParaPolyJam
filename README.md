@@ -1,5 +1,7 @@
 # ParaPolyJam
 
+![ParaPolyJam visualization](polyjam.png)
+
 **Library**: ParaPolyJam
 
 **Brief**:   ParaPolyJam is a powerful toolbox for symbolic polynomial computations
@@ -349,4 +351,3 @@ cmake -S . -B build \
            Solvability/Observability Analysis and Uncertainty Description, ***IEEE Transactions on Robotics***, https://doi.org/10.1109/TRO.2022.3155880.
 
 2. **Wu, J.**, et al. (2020). Globally Optimal Symbolic Hand-Eye Calibration. ***IEEE/ASME Transactions on Mechatronics***, https://doi.org/10.1109/TMECH.2020.3019306
-
