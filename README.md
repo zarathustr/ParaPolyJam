@@ -8,6 +8,7 @@
          contact the author. Please consult the documentation for more information.
 
 **author**:  Jin Wu, Professor, University of Science and Technology Beijing
+
              Laurent Kneip, Professor, ShanghaiTech University
 
 **contact**: wujin@ustb.edu.cn; kneip.laurent@gmail.com
