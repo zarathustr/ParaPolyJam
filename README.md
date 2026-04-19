@@ -5,7 +5,7 @@
 **Library**: ParaPolyJam
 
 **Brief**:   ParaPolyJam is a powerful toolbox for symbolic polynomial computations
-         and automatic Groebner basis solver generation in parallel C++ with Intel oneTBB. It is released
+         and automatic Groebner basis solver generation in parallel C++ with Intel oneTBB. This work was originated from the previous PolyJam project by Prof. Laurent Kneip in https://github.com/laurentkneip/polyjam, where there is no parallelism and the solver generation would be very slow. It is released
          under the GPL license. For use in proprietary applications, please
          contact the author. Please consult the documentation for more information.
 
