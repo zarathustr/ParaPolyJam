@@ -1,19 +1,19 @@
 # ParaPolyJam
 
-**library**: ParaPolyJam
+**Library**: ParaPolyJam
 
-**brief**:   ParaPolyJam is a powerful toolbox for symbolic polynomial computations
+**Brief**:   ParaPolyJam is a powerful toolbox for symbolic polynomial computations
          and automatic Groebner basis solver generation in parallel C++ with Intel oneTBB. It is released
          under the GPL license. For use in proprietary applications, please
          contact the author. Please consult the documentation for more information.
 
-**author**:  Jin Wu, Professor, University of Science and Technology Beijing
+**Author**:  Jin Wu, Professor, University of Science and Technology Beijing
 
              Laurent Kneip, Professor, ShanghaiTech University
 
-**contact**: wujin@ustb.edu.cn; kneip.laurent@gmail.com
+**Contact**: wujin@ustb.edu.cn; kneip.laurent@gmail.com
 
-## Hand-eye AX=XB Groebner-basis solver CMake project
+## Hand-eye AX=XB
 
 This distribution has been extended with a top-level CMake build that generates a Groebner-basis solver for the hand-eye calibration problem
 
@@ -23,7 +23,7 @@ A_i X = X B_i,  i = 1..N
 
 where all transforms are elements of `SE(3)`. The default generated solver uses `N=2` motion pairs; this can be changed at configure time with `-DPOLYJAM_HAND_EYE_PAIRS=<N>`.
 
-## Solver formulation
+## Solver Formulation
 
 The solver now follows the requested sequential formulation.
 
@@ -132,9 +132,9 @@ The Polyjam generator target needs Macaulay2 available as `M2` or via `-DPOLYJAM
 
 All CMake targets in the modified project are built with `-w -O3` as requested.
 
-## Additional `W*u = (Q - lambda I) q` solver
+## Additional `W*u = (Q - lambda I) q` Solver (QPEP)
 
-This package also includes a second Polyjam generator for
+This package also includes a second Polyjam generator for the following quadratic pose estimator (QPEP) in
 
 ```text
 W * u(q) = (Q - lambda * I_4) * q
@@ -295,7 +295,7 @@ report min, max, mean, and median statistics for the relevant errors, returned
 solution count, and solver runtime.  Configure the default seed count with
 `-DPOLYJAM_TEST_SEEDS=<N>` or pass `<N>` as the first executable argument.
 
-## Statistical synthetic tests
+## Statistical Synthetic Tests
 
 The synthetic test executables now loop over RNG seeds and report min, max, mean, and median statistics for the relevant errors, solution counts, and solve time in milliseconds.  The default number of seeds is controlled by:
 
@@ -305,7 +305,7 @@ The synthetic test executables now loop over RNG seeds and report min, max, mean
 
 Each test executable also accepts an optional first command-line argument for the number of seeds; the new `gxy_monomial` test accepts an optional second argument for the first seed.
 
-## Parallel row-basis pruning for solver generation
+## Parallel Row-Basis Pruning for Solver Generation
 
 This version also implements a parallel speedup pass for Polyjam's Macaulay-template equation pruning.  The old generator removed unnecessary equations by repeatedly deleting candidate rows, reducing the resulting matrix, and checking whether the action-matrix rows were still present.  That path is still available as a verified fallback, but the default generator now uses a row-space-preserving pruning strategy.
 
@@ -343,3 +343,12 @@ cmake -S . -B build \
 ```bash
 -DPOLYJAM_ENABLE_PARALLEL_PRUNING=OFF
 ```
+
+
+# References
+1. **Wu, J.**, et al. (2022)
+           Quadratic Pose Estimation Problems: Globally Optimal Solutions, 
+           Solvability/Observability Analysis and Uncertainty Description, ***IEEE Transactions on Robotics***, https://doi.org/10.1109/TRO.2022.3155880.
+
+2. **Wu, J.**, et al. (2020). Globally Optimal Symbolic Hand-Eye Calibration. ***IEEE/ASME Transactions on Mechatronics***, https://doi.org/10.1109/TMECH.2020.3019306
+
