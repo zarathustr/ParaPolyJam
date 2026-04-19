@@ -7,9 +7,7 @@
          under the GPL license. For use in proprietary applications, please
          contact the author. Please consult the documentation for more information.
 
-**Author**:  Jin Wu, Professor, University of Science and Technology Beijing
-
-             Laurent Kneip, Professor, ShanghaiTech University
+**Author**:  Jin Wu, Professor, University of Science and Technology Beijing;  Laurent Kneip, Professor, ShanghaiTech University
 
 **Contact**: wujin@ustb.edu.cn; kneip.laurent@gmail.com
 
